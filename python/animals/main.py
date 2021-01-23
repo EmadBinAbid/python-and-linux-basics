@@ -19,8 +19,20 @@ to the list. After the list is populated with the three derived Animal instances
 print the animal’s name and then call it’s speak method.
 """
 
+from python.animals.animals import Cat, Dog, Fish
+
+
 def main():
-    pass
+    animals = list()
+
+    animals.append(Dog("Rover"))
+    animals.append(Cat("Hank"))
+    animals.append(Fish("Fred"))
+
+    for animal in animals:
+        print("This animal's name is " + animal.name)
+        animal.speak()
+
 
 if __name__ == '__main__':
     main()
