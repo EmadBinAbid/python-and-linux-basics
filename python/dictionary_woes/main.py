@@ -7,8 +7,13 @@ function named “fixup_case” that takes a dictionary as an argument and retur
 standardized. Explain the method of standardization you picked and why.
 """
 
+from python.dictionary_woes.fixup_case import fixup_case, to_upper_case
+
+
 def main():
-    pass
+    api_data = {}   # TODO: define your data here
+    fixup_case(api_data, to_upper_case)
+
 
 if __name__ == '__main__':
     main()
