@@ -21,6 +21,29 @@ class FixupCaseShould(unittest.TestCase):
 
         self.assertEqual(fixup_case(actual_data, to_upper_case), expected_data)
 
+    def test_return_nested_dictionary_with_uppercase_keys_when_nested_dictionary_and_uppercase_callback_is_passed(self):
+        actual_data = {
+            "id": 1,
+            "naMe": "John Doe",
+            "Department": {
+                "iD": 1,
+                "name": "Product"
+            },
+            "DESIGNATION": "Software Engineer"
+        }
+
+        expected_data = {
+            "ID": 1,
+            "NAME": "John Doe",
+            "DEPARTMENT": {
+                "ID": 1,
+                "NAME": "Product"
+            },
+            "DESIGNATION": "Software Engineer"
+        }
+
+        self.assertEqual(fixup_case(actual_data, to_upper_case), expected_data)
+
 
 class ToUpperCaseShould(unittest.TestCase):
     def test_return_uppercase_string_when_all_lowercase_passed(self):
