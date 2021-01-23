@@ -4,9 +4,12 @@ says “List X” where X is the number of the inner list (i.e. “List 1”… 
 sum of all items in the inner list. Do this for all inner lists contained in the outer list.
 """
 
+from python.list_of_lists.list_of_lists import list_of_lists
+
 
 def main():
-    pass
+    matrix = [[]]   # TODO: define your 2D list here
+    list_of_lists(matrix)
 
 
 if __name__ == '__main__':
