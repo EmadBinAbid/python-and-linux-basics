@@ -4,8 +4,16 @@ passed in. If the function is passed a Dog object, call the bark() method on the
 Cat object, call the meow() method on the object. If neither a Dog or Cat is passed, raise an exception.
 """
 
+from python.type_troubles.type_troubles import type_troubles, Cat, Dog
+
+
 def main():
-    pass
+    cat = Cat()
+    dog = Dog()
+
+    type_troubles(cat)
+    type_troubles(dog)
+
 
 if __name__ == '__main__':
     main()
